@@ -1,4 +1,4 @@
-# MuViS-DIR: Deep Imbalanced Regression on the MuViS time-series benchmark
+# Exposing Blind Spots in Deep Imbalanced Regression Evaluation
 
 ## Overview
 
@@ -20,42 +20,16 @@ constraint.  The full sweep is 6 methods × 9 datasets × 10 seeds = 540 runs.
 
 ## Installation
 
-Requires Python 3.13.7 (Linux/macOS).  No system packages beyond a working
+Requires Python 3.13.7. No system packages beyond a working
 CUDA-enabled PyTorch are needed.
 
 ```bash
 git clone <repo-url> muvis-dir && cd muvis-dir
-python3.13 -m venv .venv && source .venv/bin/activate
-pip install -e .
+uv venv && source .venv/bin/activate
+uv pip install -e .
 ```
 
-## Data
-
-This repository consumes the **preprocessed** MuViS-DIR data bundle.  Raw
-preprocessing (recording-level segmentation, target column extraction) lives
-in the upstream MuViS repository — do not redo it here.
-
-! TODO
-
-```
-$DATA_DIR/
-├── BeijingPM10Quality/{train,test}.ts
-├── BeijingPM25Quality/{train,test}.ts
-├── PPGDalia/{train,test}.ts
-├── Panasonic18650PFData/{train,test}.ts
-├── REVS/2013_Monterey_Motorsports_Reunion/{train,test}.ts
-├── REVS/2013_Targa_Sixty_Six/{train,test}.ts
-├── REVS/2014_Targa_Sixty_Six/{train,test}.ts
-├── TennesseeEastmanProcess/{train,test}.ts
-└── VehicleDynamicsDataset/{train,test}.ts
-```
-
-Per-dataset license, citation, and intended-use statements are documented
-upstream in MuViS;
-table here for the camera-ready submission. --> they are not duplicated in
-this repository.  No further preprocessing command is required — the data
-loader applies a per-channel z-score on a fresh fit per seed and the rest is
-done in-memory.
+Addittionally you neede the MuViS package and data. For that follow the instructions under [MuViS](https://github.com/noah-puetz/MuViS), download the corresponding data and execute the prepocessing.
 
 ## Quick Start
 
