@@ -1,0 +1,6 @@
+lr: 0.00025
+batch_size: 64
+epochs: 120
+schedule: [60, 80]
+focal_beta: 0.2
+focal_gamma: 1.0

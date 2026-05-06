@@ -1,0 +1,4 @@
+# Shared training defaults applied to every method unless overridden by the
+# method config or the per-pair manifest (configs/best_per_pair.yaml).
+num_workers: 4
+num_bins: 100        # histogram bins for LDS / SQInv / UVote weight computation

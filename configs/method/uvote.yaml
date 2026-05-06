@@ -1,0 +1,6 @@
+lr: 0.001
+batch_size: 64
+epochs: 90
+schedule: [60, 80]
+uvote_num_branch: 2
+uvote_dynamic_loss: 1   # 1 = enable gradual expert assignment

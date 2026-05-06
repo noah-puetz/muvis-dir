@@ -1,0 +1,9 @@
+# ResNet1D architecture chosen by upstream MuViS hyperparameter search.
+# Source: MuViS/configs/BeijingPM10Quality/ResNet1D.yaml.
+architecture:
+  output_size: 1
+  num_filters: 156
+  fc_units: 512
+  num_res_blocks: 4
+  dropout1: 0.15361653647417456
+  dropout2: 0.028091835356764717
