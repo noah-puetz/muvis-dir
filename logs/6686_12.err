@@ -1,0 +1,14 @@
+2026-05-06 18:07:37,450  Device: cuda
+2026-05-06 18:07:37,450  Dataset: PPGDalia | Method: lds | Seed: 42
+2026-05-06 18:07:37,451  Loading data from ../MuViS/data/processed …
+2026-05-06 18:08:32,335  Train=46581  Val=5176  Test=12940  feat_dim=6
+2026-05-06 18:08:32,336  Computing LDS weights …
+2026-05-06 18:08:32,557  Backbone: feature_dim=512
+2026-05-06 18:08:33,129  LDS: 120 epochs, batch=256, lr=0.00100
+2026-05-06 18:09:52,292  epoch  20/120  val L1 7.2855 (best 7.2855)
+2026-05-06 18:11:10,878  epoch  40/120  val L1 6.2512 (best 6.2512)
+2026-05-06 18:12:29,479  epoch  60/120  val L1 5.0907 (best 5.0907)
+2026-05-06 18:13:47,983  epoch  80/120  val L1 4.6979 (best 4.6979)
+2026-05-06 18:15:06,617  epoch 100/120  val L1 4.6488 (best 4.6358)
+2026-05-06 18:16:25,168  epoch 120/120  val L1 4.6272 (best 4.6123)
+2026-05-06 18:16:25,689  Wrote predictions/seed_42/PPGDalia_lds_seed42_predictions.npz

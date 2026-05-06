@@ -1,0 +1,17 @@
+2026-05-06 18:05:51,562  Device: cuda
+2026-05-06 18:05:51,562  Dataset: BeijingPM10Quality | Method: uvote | Seed: 42
+2026-05-06 18:05:51,563  Loading data from ../MuViS/data/processed …
+2026-05-06 18:05:56,787  Train=10726  Val=1192  Test=5048  feat_dim=9
+2026-05-06 18:05:56,787  Computing UVote weights (num_branch=3) …
+2026-05-06 18:05:57,432  Backbone: feature_dim=512
+2026-05-06 18:05:58,046  UVote: 90 epochs, batch=64, num_branch=3, dynamic_loss=True
+2026-05-06 18:06:12,798  epoch  10/90  val L1 54.5220 (best 54.5220)
+2026-05-06 18:06:26,679  epoch  20/90  val L1 52.3212 (best 50.6864)
+2026-05-06 18:06:40,931  epoch  30/90  val L1 54.8027 (best 48.1292)
+2026-05-06 18:06:55,005  epoch  40/90  val L1 43.7177 (best 43.6104)
+2026-05-06 18:07:08,903  epoch  50/90  val L1 43.9480 (best 42.3435)
+2026-05-06 18:07:22,590  epoch  60/90  val L1 41.3377 (best 41.3377)
+2026-05-06 18:07:36,460  epoch  70/90  val L1 40.3877 (best 39.8912)
+2026-05-06 18:07:50,200  epoch  80/90  val L1 41.1637 (best 39.3957)
+2026-05-06 18:08:03,719  epoch  90/90  val L1 40.6901 (best 39.3957)
+2026-05-06 18:08:03,990  Wrote predictions/seed_42/BeijingPM10Quality_uvote_seed42_predictions.npz

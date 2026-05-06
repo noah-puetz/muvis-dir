@@ -1,0 +1,14 @@
+2026-05-06 18:07:57,669  Device: cuda
+2026-05-06 18:07:57,669  Dataset: PPGDalia | Method: sqinv | Seed: 42
+2026-05-06 18:07:57,670  Loading data from ../MuViS/data/processed …
+2026-05-06 18:08:51,286  Train=46581  Val=5176  Test=12940  feat_dim=6
+2026-05-06 18:08:51,286  Computing SQInv weights …
+2026-05-06 18:08:51,507  Backbone: feature_dim=512
+2026-05-06 18:08:52,103  SQINV: 120 epochs, batch=256, lr=0.00100
+2026-05-06 18:10:11,289  epoch  20/120  val L1 7.2453 (best 7.1343)
+2026-05-06 18:11:29,716  epoch  40/120  val L1 6.1517 (best 6.1517)
+2026-05-06 18:12:48,125  epoch  60/120  val L1 4.9588 (best 4.9588)
+2026-05-06 18:14:06,532  epoch  80/120  val L1 4.5749 (best 4.5749)
+2026-05-06 18:15:24,891  epoch 100/120  val L1 4.5252 (best 4.5252)
+2026-05-06 18:16:43,357  epoch 120/120  val L1 4.5426 (best 4.5086)
+2026-05-06 18:16:43,889  Wrote predictions/seed_42/PPGDalia_sqinv_seed42_predictions.npz

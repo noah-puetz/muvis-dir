@@ -10,7 +10,6 @@
 #SBATCH --error=logs/%A_%a.err
 
 # ── required ────────────────────────────────────────────────────────────────
-DATA_DIR=${DATA_DIR:?'Set DATA_DIR before submitting, e.g. sbatch --export=DATA_DIR=/path/to/data slurm_reproduce.sh'}
 OUTPUT_ROOT=${OUTPUT_ROOT:-predictions}
 # ────────────────────────────────────────────────────────────────────────────
 
@@ -27,6 +26,7 @@ DATASETS=(
     VehicleDynamicsDataset
 )
 METHODS=(lds sqinv focal_l1 conr rnc uvote)
+DATA_DIR="../MuViS/data/processed"
 
 N_DATASETS=${#DATASETS[@]}
 N_METHODS=${#METHODS[@]}

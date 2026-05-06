@@ -1,0 +1,13 @@
+2026-05-06 18:06:51,495  Device: cuda
+2026-05-06 18:06:51,495  Dataset: BeijingPM25Quality | Method: conr | Seed: 42
+2026-05-06 18:06:51,496  Loading data from ../MuViS/data/processed …
+2026-05-06 18:06:56,845  Train=10726  Val=1192  Test=5048  feat_dim=9
+2026-05-06 18:06:57,449  Backbone: feature_dim=64
+2026-05-06 18:06:58,051  CONR: 120 epochs, batch=256, lr=0.00100
+2026-05-06 18:07:14,664  epoch  20/120  val L1 34.6182 (best 32.9707)
+2026-05-06 18:07:30,586  epoch  40/120  val L1 29.3274 (best 29.0821)
+2026-05-06 18:07:46,743  epoch  60/120  val L1 26.3599 (best 26.3599)
+2026-05-06 18:08:03,080  epoch  80/120  val L1 25.5895 (best 25.5345)
+2026-05-06 18:08:19,047  epoch 100/120  val L1 25.4360 (best 25.3790)
+2026-05-06 18:08:35,209  epoch 120/120  val L1 25.4976 (best 25.3667)
+2026-05-06 18:08:35,363  Wrote predictions/seed_42/BeijingPM25Quality_conr_seed42_predictions.npz

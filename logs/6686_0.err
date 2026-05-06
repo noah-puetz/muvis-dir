@@ -1,0 +1,14 @@
+2026-05-06 18:05:53,247  Device: cuda
+2026-05-06 18:05:53,247  Dataset: BeijingPM10Quality | Method: lds | Seed: 42
+2026-05-06 18:05:53,248  Loading data from ../MuViS/data/processed …
+2026-05-06 18:05:58,573  Train=10726  Val=1192  Test=5048  feat_dim=9
+2026-05-06 18:05:58,573  Computing LDS weights …
+2026-05-06 18:05:58,754  Backbone: feature_dim=512
+2026-05-06 18:05:59,369  LDS: 120 epochs, batch=256, lr=0.00100
+2026-05-06 18:06:07,886  epoch  20/120  val L1 127.8503 (best 92.6815)
+2026-05-06 18:06:15,805  epoch  40/120  val L1 721.6334 (best 92.6815)
+2026-05-06 18:06:23,784  epoch  60/120  val L1 127.9976 (best 92.6815)
+2026-05-06 18:06:31,800  epoch  80/120  val L1 121.6851 (best 92.6815)
+2026-05-06 18:06:39,908  epoch 100/120  val L1 129.6058 (best 92.6815)
+2026-05-06 18:06:48,124  epoch 120/120  val L1 113.8041 (best 92.6815)
+2026-05-06 18:06:48,283  Wrote predictions/seed_42/BeijingPM10Quality_lds_seed42_predictions.npz

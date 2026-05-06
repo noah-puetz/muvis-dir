@@ -1,0 +1,13 @@
+2026-05-06 18:05:52,894  Device: cuda
+2026-05-06 18:05:52,894  Dataset: BeijingPM10Quality | Method: focal_l1 | Seed: 42
+2026-05-06 18:05:52,895  Loading data from ../MuViS/data/processed …
+2026-05-06 18:05:58,221  Train=10726  Val=1192  Test=5048  feat_dim=9
+2026-05-06 18:05:58,391  Backbone: feature_dim=512
+2026-05-06 18:05:59,025  FOCAL_L1: 120 epochs, batch=64, lr=0.00025
+2026-05-06 18:06:18,582  epoch  20/120  val L1 45.6741 (best 44.6562)
+2026-05-06 18:06:37,848  epoch  40/120  val L1 41.0023 (best 40.3089)
+2026-05-06 18:06:57,048  epoch  60/120  val L1 39.0017 (best 38.9078)
+2026-05-06 18:07:15,861  epoch  80/120  val L1 38.6794 (best 38.2067)
+2026-05-06 18:07:34,808  epoch 100/120  val L1 38.5135 (best 38.1196)
+2026-05-06 18:07:53,539  epoch 120/120  val L1 38.4106 (best 38.1196)
+2026-05-06 18:07:53,774  Wrote predictions/seed_42/BeijingPM10Quality_focal_l1_seed42_predictions.npz

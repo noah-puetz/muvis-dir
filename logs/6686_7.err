@@ -1,0 +1,14 @@
+2026-05-06 18:05:51,789  Device: cuda
+2026-05-06 18:05:51,789  Dataset: BeijingPM25Quality | Method: sqinv | Seed: 42
+2026-05-06 18:05:51,790  Loading data from ../MuViS/data/processed …
+2026-05-06 18:05:57,002  Train=10726  Val=1192  Test=5048  feat_dim=9
+2026-05-06 18:05:57,003  Computing SQInv weights …
+2026-05-06 18:05:57,513  Backbone: feature_dim=64
+2026-05-06 18:05:58,107  SQINV: 120 epochs, batch=256, lr=0.00100
+2026-05-06 18:06:06,790  epoch  20/120  val L1 35.2361 (best 35.2361)
+2026-05-06 18:06:14,925  epoch  40/120  val L1 35.2293 (best 32.8262)
+2026-05-06 18:06:23,029  epoch  60/120  val L1 30.2932 (best 30.2932)
+2026-05-06 18:06:31,083  epoch  80/120  val L1 30.4428 (best 30.0696)
+2026-05-06 18:06:39,221  epoch 100/120  val L1 30.2095 (best 30.0597)
+2026-05-06 18:06:47,558  epoch 120/120  val L1 30.3934 (best 30.0498)
+2026-05-06 18:06:47,721  Wrote predictions/seed_42/BeijingPM25Quality_sqinv_seed42_predictions.npz

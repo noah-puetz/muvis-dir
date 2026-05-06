@@ -34,7 +34,7 @@ Addittionally you neede the MuViS package and data. For that follow the instruct
 ## Quick Start
 
 Train Vanilla on the smallest dataset (Vehicle Dynamics, 1.4k train) for 5
-epochs as a sanity check (< 10 minutes on the recommended GPU):
+epochs as a sanity check (< 10 minutes on the recommended GPU). DATA_DIR should correspond to the `MuViS/data/processed/` directory.
 
 ```bash
 make smoke DATA_DIR=$DATA_DIR

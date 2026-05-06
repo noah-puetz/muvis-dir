@@ -1,0 +1,10 @@
+2026-05-06 18:08:07,802  Device: cuda
+2026-05-06 18:08:07,802  Dataset: PPGDalia | Method: focal_l1 | Seed: 42
+2026-05-06 18:08:07,803  Loading data from ../MuViS/data/processed …
+2026-05-06 18:09:01,423  Train=46581  Val=5176  Test=12940  feat_dim=6
+2026-05-06 18:09:01,640  Backbone: feature_dim=512
+2026-05-06 18:09:02,231  FOCAL_L1: 120 epochs, batch=64, lr=0.00025
+2026-05-06 18:10:42,856  epoch  20/120  val L1 6.4751 (best 6.2477)
+2026-05-06 18:12:22,489  epoch  40/120  val L1 4.6348 (best 4.6348)
+2026-05-06 18:14:03,195  epoch  60/120  val L1 3.3988 (best 3.3988)
+2026-05-06 18:15:42,780  epoch  80/120  val L1 3.0535 (best 3.0535)

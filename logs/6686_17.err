@@ -1,0 +1,13 @@
+2026-05-06 18:09:06,114  Device: cuda
+2026-05-06 18:09:06,115  Dataset: PPGDalia | Method: uvote | Seed: 42
+2026-05-06 18:09:06,115  Loading data from ../MuViS/data/processed …
+2026-05-06 18:09:59,899  Train=46581  Val=5176  Test=12940  feat_dim=6
+2026-05-06 18:09:59,899  Computing UVote weights (num_branch=2) …
+2026-05-06 18:10:00,126  Backbone: feature_dim=512
+2026-05-06 18:10:00,738  UVote: 90 epochs, batch=64, num_branch=2, dynamic_loss=True
+2026-05-06 18:11:04,184  epoch  10/90  val L1 8.7916 (best 8.2281)
+2026-05-06 18:12:07,669  epoch  20/90  val L1 6.7002 (best 6.7002)
+2026-05-06 18:13:10,858  epoch  30/90  val L1 5.8884 (best 5.8356)
+2026-05-06 18:14:13,706  epoch  40/90  val L1 5.1447 (best 4.9922)
+2026-05-06 18:15:16,680  epoch  50/90  val L1 4.4864 (best 4.4864)
+2026-05-06 18:16:19,979  epoch  60/90  val L1 4.0423 (best 4.0423)

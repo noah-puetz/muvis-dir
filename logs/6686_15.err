@@ -1,0 +1,7 @@
+2026-05-06 18:08:39,151  Device: cuda
+2026-05-06 18:08:39,151  Dataset: PPGDalia | Method: conr | Seed: 42
+2026-05-06 18:08:39,152  Loading data from ../MuViS/data/processed …
+2026-05-06 18:09:32,799  Train=46581  Val=5176  Test=12940  feat_dim=6
+2026-05-06 18:09:33,011  Backbone: feature_dim=512
+2026-05-06 18:09:33,634  CONR: 120 epochs, batch=256, lr=0.00100
+2026-05-06 18:13:25,965  epoch  20/120  val L1 7.0467 (best 6.9456)

@@ -1,0 +1,13 @@
+2026-05-06 18:05:52,022  Device: cuda
+2026-05-06 18:05:52,023  Dataset: BeijingPM10Quality | Method: conr | Seed: 42
+2026-05-06 18:05:52,024  Loading data from ../MuViS/data/processed …
+2026-05-06 18:05:57,323  Train=10726  Val=1192  Test=5048  feat_dim=9
+2026-05-06 18:05:57,548  Backbone: feature_dim=512
+2026-05-06 18:05:58,159  CONR: 120 epochs, batch=256, lr=0.00100
+2026-05-06 18:06:14,492  epoch  20/120  val L1 47.2472 (best 47.2472)
+2026-05-06 18:06:30,302  epoch  40/120  val L1 41.5430 (best 41.5430)
+2026-05-06 18:06:46,125  epoch  60/120  val L1 39.8927 (best 39.8927)
+2026-05-06 18:07:01,833  epoch  80/120  val L1 40.4185 (best 39.3707)
+2026-05-06 18:07:17,524  epoch 100/120  val L1 40.1543 (best 39.3707)
+2026-05-06 18:07:33,352  epoch 120/120  val L1 40.3289 (best 39.3707)
+2026-05-06 18:07:33,513  Wrote predictions/seed_42/BeijingPM10Quality_conr_seed42_predictions.npz
