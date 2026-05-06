@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Deep Imbalanced Regression methods on the MuViS time-series benchmark."
 readme = "README.md"
 requires-python = ">=3.13"
-license = { text = "MIT" } # TODO(noah): confirm license; matches MuViS upstream
+license = { text = "MIT" }
 authors = [{ name = "anonymous" }]
 classifiers = [
     "Programming Language :: Python :: 3",
