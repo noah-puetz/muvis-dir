@@ -1,0 +1,8 @@
+lr: 0.001
+batch_size: 256
+epochs: 120
+schedule: [60, 80]
+conr_w: 1.0
+conr_beta: 4.0
+conr_e: 0.01
+conr_temp: 0.2       # paper recommendation; AgeDB code hard-coded 0.07

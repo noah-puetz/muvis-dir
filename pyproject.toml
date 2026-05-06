@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "muvis-dir"
+version = "0.1.0"
+description = "Deep Imbalanced Regression methods on the MuViS time-series benchmark."
+readme = "README.md"
+requires-python = ">=3.13"
+license = { text = "MIT" }
+authors = [{ name = "anonymous" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX",
+]
+dependencies = [
+    "numpy==2.3.5",
+    "scipy==1.17.0",
+    "scikit-learn==1.7.2",
+    "sktime==0.40.1",
+    "torch==2.9.1",
+    "PyYAML",
+    "pandas==2.3.3",
+]
+
+[project.scripts]
+muvis-dir-train = "muvis_dir.train:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["muvis_dir*"]

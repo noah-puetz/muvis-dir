@@ -1,0 +1,15 @@
+# RnC trains in two SGD stages.  ``lr`` / ``batch_size`` / ``epochs`` /
+# ``schedule`` are placeholders required by the trainer's flow but unused
+# by RnC itself.
+rnc_batch_size: 64
+rnc_temp: 2.0
+rnc_lr_s1: 0.5
+rnc_epochs_s1: 400
+rnc_decay_s1: 0.1
+rnc_lr_s2: 0.05
+rnc_epochs_s2: 90
+rnc_decay_s2: 0.2
+lr: 0.001
+batch_size: 64
+epochs: 490          # s1 + s2; bookkeeping only
+schedule: [300, 400]

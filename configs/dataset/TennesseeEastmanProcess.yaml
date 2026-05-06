@@ -1,0 +1,7 @@
+architecture:
+  output_size: 1
+  num_filters: 256
+  fc_units: 256
+  num_res_blocks: 4
+  dropout1: 0.09323492210214082
+  dropout2: 0.09481653981230842

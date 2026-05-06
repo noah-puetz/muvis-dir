@@ -1,0 +1,8 @@
+lr: 0.001
+batch_size: 256
+epochs: 120
+schedule: [60, 80]
+lds_kernel: gaussian
+lds_ks: 5
+lds_sigma: 2.0
+lds_reweight: sqrt_inv
