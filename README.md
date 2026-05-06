@@ -2,26 +2,15 @@
 
 ## Overview
 
-This repository reproduces the per-(method, dataset) results table from
-*Exposing Blind Spots in Deep Imbalanced Regression Evaluation* (NeurIPS 2026
-Datasets & Benchmarks track, anonymous submission).  It applies six published
-DIR methods — LDS, SQInv, Focal-L<sub>1</sub>, ConR, RnC, and UVote — plus a
-vanilla L<sub>1</sub> baseline to the nine multivariate time-series datasets
-of MuViS, using a per-dataset ResNet1D backbone with a single shared training
-protocol per method.  The point of the paper is that standard MAE / R²
-disguise systematic failures in the tail; this repo emits per-seed
-predictions whose balanced metrics expose those failures.
+This repository reproduces the per-(method, dataset) results table from *Exposing Blind Spots in Deep Imbalanced Regression Evaluation* (NeurIPS 2026 Datasets & Benchmarks track, anonymous submission).  It applies six published DIR methods — LDS, SQInv, Focal-L<sub>1</sub>, ConR, RnC, and UVote — plus a vanilla L<sub>1</sub> baseline to the nine multivariate time-series datasets of MuViS, using a per-dataset ResNet1D backbone with a single shared training protocol per method.  The point of the paper is that standard MAE / R² disguise systematic failures in the tail; this repo emits per-seed predictions whose balanced metrics expose those failures.
 
 ## Hardware Requirements
 
-Tested on a single NVIDIA H100 (80 GB) with CUDA 13.2.  Minimum 24 GB GPU is
-sufficient for every method; RnC stage 1 (400 epochs) is the binding
-constraint.  The full sweep is 6 methods × 9 datasets × 10 seeds = 540 runs.
+Tested on a single NVIDIA H100 (80 GB) with CUDA 13.2.  Minimum 24 GB GPU is sufficient for every method; RnC stage 1 (400 epochs) is the binding constraint.  The full sweep is 6 methods × 9 datasets × 10 seeds = 540 runs.
 
 ## Installation
 
-Requires Python 3.13.7. No system packages beyond a working
-CUDA-enabled PyTorch are needed.
+Requires Python 3.13.7. No system packages beyond a working CUDA-enabled PyTorch are needed.
 
 ```bash
 git clone <repo-url> muvis-dir && cd muvis-dir
@@ -29,7 +18,7 @@ uv venv && source .venv/bin/activate
 uv pip install -e .
 ```
 
-Addittionally you neede the MuViS package and data. For that follow the instructions under [MuViS](https://github.com/noah-puetz/MuViS), download the corresponding data and execute the prepocessing.
+Additionally you neede the MuViS package and data. For that follow the instructions under [MuViS](https://github.com/noah-puetz/MuViS), download the corresponding data and execute the prepocessing.
 
 ## Quick Start
 
