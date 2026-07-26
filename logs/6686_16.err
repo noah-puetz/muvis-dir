@@ -1,6 +1,0 @@
-2026-05-06 18:08:57,059  Device: cuda
-2026-05-06 18:08:57,060  Dataset: PPGDalia | Method: rnc | Seed: 42
-2026-05-06 18:08:57,061  Loading data from ../MuViS/data/processed …
-2026-05-06 18:09:51,431  Train=46581  Val=5176  Test=12940  feat_dim=6
-2026-05-06 18:09:51,640  Backbone: feature_dim=512
-2026-05-06 18:09:52,246  RnC Stage 1: contrastive pre-training for 400 epochs

@@ -1,9 +1,0 @@
-2026-05-06 18:05:52,276  Device: cuda
-2026-05-06 18:05:52,276  Dataset: BeijingPM10Quality | Method: rnc | Seed: 42
-2026-05-06 18:05:52,277  Loading data from ../MuViS/data/processed …
-2026-05-06 18:05:57,567  Train=10726  Val=1192  Test=5048  feat_dim=9
-2026-05-06 18:05:57,729  Backbone: feature_dim=512
-2026-05-06 18:05:58,354  RnC Stage 1: contrastive pre-training for 400 epochs
-2026-05-06 18:09:25,897  RnC S1 epoch   50/400  val L1 206.3967
-2026-05-06 18:12:53,031  RnC S1 epoch  100/400  val L1 206.3522
-2026-05-06 18:16:20,371  RnC S1 epoch  150/400  val L1 206.2830
