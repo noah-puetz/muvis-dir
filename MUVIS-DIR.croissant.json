@@ -1,0 +1,544 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "samplingRate": "cr:samplingRate",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "equivalentProperty": "cr:equivalentProperty"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "MUVIS-DIR",
+  "description": "MUVIS-DIR is a deep-imbalanced-regression (DIR) evaluation benchmark built on the published MuViS multimodal virtual-sensing suite (Brandt et al.). It is NOT a new dataset: it reuses MuViS's unified preprocessing and predefined train/test splits for nine multimodal time-series extrinsic-regression tasks drawn from six independently published, openly licensed source datasets, and adds a DIR-specific evaluation protocol (task selection, a seed-dependent 90/10 train/val split, Freedman-Diaconis balanced bins, and the bMAE / bMASE balanced metrics). Each distributed split is an sktime .ts file with inputs X of shape (N, T, D) and target y of shape (N,). Underlying source datasets are referenced by persistent identifier in `isBasedOn` and in the per-task `source_doi` / `source_license` fields; they retain their original licenses. The MuViS preprocessing and this evaluation layer (code, task/split/bin definitions, metrics) are released under the MIT License. IMPORTANT: the redistributed source data is under MIXED licenses (CC-BY-4.0, CC0-1.0, BSD-3-Clause, ODC-By-1.0) and, for the Tire Temp. task (Vehicle Dynamics Dataset), the copyleft CC-BY-SA-4.0 license, whose ShareAlike term applies to redistributed derivatives of that task. Consult the per-task `source_license` field before redistributing any individual split.",
+  "conformsToProtocol": "DIR evaluation (bMAE/bMASE)",
+  "url": "https://anonymous.4open.science/r/MUVIS-DIR",
+  "version": "1.0.0",
+  "license": "Mixed: MUVIS-DIR evaluation layer and MuViS preprocessing under MIT (https://spdx.org/licenses/MIT.html); redistributed source data under the per-task licenses in recordSet 'tasks' (source_license) — CC-BY-4.0, CC0-1.0, BSD-3-Clause, ODC-By-1.0, and CC-BY-SA-4.0 (Tire Temp.).",
+  "citeAs": "Anonymous. Exposing Blind Spots in Deep Imbalanced Regression Evaluation. Under review, NeurIPS 2026. Built on MuViS (Brandt et al.).",
+  "creator": {
+    "@type": "sc:Organization",
+    "name": "Anonymous (under review)"
+  },
+  "datePublished": "2026-01-01",
+  "isBasedOn": [
+    {
+      "@type": "sc:CreativeWork",
+      "name": "MuViS: A Multimodal Virtual Sensing Benchmark (Brandt et al.)",
+      "url": "https://github.com/<muvis-repo>",
+      "license": "https://spdx.org/licenses/MIT.html"
+    },
+    {
+      "@type": "sc:CreativeWork",
+      "name": "Beijing Multi-Site Air Quality",
+      "url": "https://zenodo.org/records/3902667",
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "@type": "sc:CreativeWork",
+      "name": "Beijing Multi-Site Air Quality",
+      "url": "https://zenodo.org/records/3902671",
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "@type": "sc:CreativeWork",
+      "name": "PPG-DaLiA",
+      "url": "https://archive.ics.uci.edu/dataset/495/ppg+dalia",
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "@type": "sc:CreativeWork",
+      "name": "Panasonic 18650PF",
+      "url": "https://data.mendeley.com/datasets/xf68bwh54v/1",
+      "license": "https://opensource.org/license/bsd-3-clause"
+    },
+    {
+      "@type": "sc:CreativeWork",
+      "name": "REVS (2013 Monterey Motorsports Reunion)",
+      "url": "https://purl.stanford.edu/tt103jr6546",
+      "license": "https://opendatacommons.org/licenses/by/1-0/"
+    },
+    {
+      "@type": "sc:CreativeWork",
+      "name": "REVS (2013 Targa Sixty Six)",
+      "url": "https://purl.stanford.edu/yf219gg2055",
+      "license": "https://opendatacommons.org/licenses/by/1-0/"
+    },
+    {
+      "@type": "sc:CreativeWork",
+      "name": "REVS (2014 Targa Sixty Six)",
+      "url": "https://purl.stanford.edu/hd122pw0365",
+      "license": "https://opendatacommons.org/licenses/by/1-0/"
+    },
+    {
+      "@type": "sc:CreativeWork",
+      "name": "Tennessee Eastman Process",
+      "url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6C3JR1",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "@type": "sc:CreativeWork",
+      "name": "Vehicle Dynamics Dataset",
+      "url": "https://exhibits.stanford.edu/data/catalog/hh613qz0317",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "keywords": [
+    "deep imbalanced regression",
+    "virtual sensing",
+    "time series",
+    "extrinsic regression",
+    "balanced evaluation",
+    "bMASE",
+    "benchmark"
+  ],
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "PM10-train.ts",
+      "name": "PM10-train.ts",
+      "description": "Train split for the PM10 task, sktime .ts (X: N x T x D, y: N).",
+      "contentUrl": "https://anonymous.4open.science/r/MUVIS-DIR/data/processed/BeijingPM10Quality/train.ts",
+      "encodingFormat": "text/plain",
+      "sha256": "13fd5aef41383c460e183afbd866847af3f92aa509184766aedae314c3e90a00",
+      "contentSize": "13276986 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "PM10-test.ts",
+      "name": "PM10-test.ts",
+      "description": "Test split for the PM10 task, sktime .ts (X: N x T x D, y: N).",
+      "contentUrl": "https://anonymous.4open.science/r/MUVIS-DIR/data/processed/BeijingPM10Quality/test.ts",
+      "encodingFormat": "text/plain",
+      "sha256": "ddac30606f6a16a7b45c522ea2b153ba9a67fc9211b228278846c1c797379514",
+      "contentSize": "5609607 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "PM2.5-train.ts",
+      "name": "PM2.5-train.ts",
+      "description": "Train split for the PM2.5 task, sktime .ts (X: N x T x D, y: N).",
+      "contentUrl": "https://anonymous.4open.science/r/MUVIS-DIR/data/processed/BeijingPM25Quality/train.ts",
+      "encodingFormat": "text/plain",
+      "sha256": "c84cdc465293cbca0f42b3fe52edaea21aa3c9dcb367d43bf249f386cd8e4f33",
+      "contentSize": "13271660 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "PM2.5-test.ts",
+      "name": "PM2.5-test.ts",
+      "description": "Test split for the PM2.5 task, sktime .ts (X: N x T x D, y: N).",
+      "contentUrl": "https://anonymous.4open.science/r/MUVIS-DIR/data/processed/BeijingPM25Quality/test.ts",
+      "encodingFormat": "text/plain",
+      "sha256": "2afaa73f1d44c5fde4f153bb359f88e20506a6c1a49f9332e5afdc6952d1e0af",
+      "contentSize": "5607671 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "HeartRate-train.ts",
+      "name": "HeartRate-train.ts",
+      "description": "Train split for the HeartRate task, sktime .ts (X: N x T x D, y: N).",
+      "contentUrl": "https://anonymous.4open.science/r/MUVIS-DIR/data/processed/PPGDalia/train.ts",
+      "encodingFormat": "text/plain",
+      "sha256": "a066fd2c9879e7d8128fb52f9d71b9c9cbc491eee5c715a83dc9f44525e3bc69",
+      "contentSize": "1476995989 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "HeartRate-test.ts",
+      "name": "HeartRate-test.ts",
+      "description": "Test split for the HeartRate task, sktime .ts (X: N x T x D, y: N).",
+      "contentUrl": "https://anonymous.4open.science/r/MUVIS-DIR/data/processed/PPGDalia/test.ts",
+      "encodingFormat": "text/plain",
+      "sha256": "d4f0796b3a6d86345b6b908ca014373b96867d4ce4da17948151789b631b4761",
+      "contentSize": "369336636 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "BatterySoC-train.ts",
+      "name": "BatterySoC-train.ts",
+      "description": "Train split for the BatterySoC task, sktime .ts (X: N x T x D, y: N).",
+      "contentUrl": "https://anonymous.4open.science/r/MUVIS-DIR/data/processed/Panasonic18650PFData/train.ts",
+      "encodingFormat": "text/plain",
+      "sha256": "74cf14a3bf0b322c59584f423003affd9649b2c94c66b6ed226c74b558596173",
+      "contentSize": "3192666843 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "BatterySoC-test.ts",
+      "name": "BatterySoC-test.ts",
+      "description": "Test split for the BatterySoC task, sktime .ts (X: N x T x D, y: N).",
+      "contentUrl": "https://anonymous.4open.science/r/MUVIS-DIR/data/processed/Panasonic18650PFData/test.ts",
+      "encodingFormat": "text/plain",
+      "sha256": "416cfe3a1b8fd1c685bf7c778df9b4677e150118a58d90dddd2314e4e5157ee7",
+      "contentSize": "2523248951 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "Monterey-train.ts",
+      "name": "Monterey-train.ts",
+      "description": "Train split for the Monterey task, sktime .ts (X: N x T x D, y: N).",
+      "contentUrl": "https://anonymous.4open.science/r/MUVIS-DIR/data/processed/REVS/2013_Monterey_Motorsports_Reunion/train.ts",
+      "encodingFormat": "text/plain",
+      "sha256": "2505812cdb003d2f905cf5625eaa0ca77f16064264b654270b65c96a9298dc9c",
+      "contentSize": "299571020 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "Monterey-test.ts",
+      "name": "Monterey-test.ts",
+      "description": "Test split for the Monterey task, sktime .ts (X: N x T x D, y: N).",
+      "contentUrl": "https://anonymous.4open.science/r/MUVIS-DIR/data/processed/REVS/2013_Monterey_Motorsports_Reunion/test.ts",
+      "encodingFormat": "text/plain",
+      "sha256": "06b03820a5d65755de381f5ebff5c40036d3ce873b904587827a9111c38f39c1",
+      "contentSize": "52938189 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "Targa13-train.ts",
+      "name": "Targa13-train.ts",
+      "description": "Train split for the Targa13 task, sktime .ts (X: N x T x D, y: N).",
+      "contentUrl": "https://anonymous.4open.science/r/MUVIS-DIR/data/processed/REVS/2013_Targa_Sixty_Six/train.ts",
+      "encodingFormat": "text/plain",
+      "sha256": "20ff9d571e90407e3166dfb844fc515c8310cccecc6dfb8ef29da227b3162a3f",
+      "contentSize": "83359056 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "Targa13-test.ts",
+      "name": "Targa13-test.ts",
+      "description": "Test split for the Targa13 task, sktime .ts (X: N x T x D, y: N).",
+      "contentUrl": "https://anonymous.4open.science/r/MUVIS-DIR/data/processed/REVS/2013_Targa_Sixty_Six/test.ts",
+      "encodingFormat": "text/plain",
+      "sha256": "2f9be7b62c89d9f0047827bd46e321c567f430c5da4ab374b313f30af61a2fd0",
+      "contentSize": "27585656 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "Targa14-train.ts",
+      "name": "Targa14-train.ts",
+      "description": "Train split for the Targa14 task, sktime .ts (X: N x T x D, y: N).",
+      "contentUrl": "https://anonymous.4open.science/r/MUVIS-DIR/data/processed/REVS/2014_Targa_Sixty_Six/train.ts",
+      "encodingFormat": "text/plain",
+      "sha256": "be002709c1b8015d9a7a3bd2326384a07396eecd051a03fb147313dee579d553",
+      "contentSize": "116050678 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "Targa14-test.ts",
+      "name": "Targa14-test.ts",
+      "description": "Test split for the Targa14 task, sktime .ts (X: N x T x D, y: N).",
+      "contentUrl": "https://anonymous.4open.science/r/MUVIS-DIR/data/processed/REVS/2014_Targa_Sixty_Six/test.ts",
+      "encodingFormat": "text/plain",
+      "sha256": "051cddf11382ab4fbb0827f12979a49b6a22f592017cc31c61aabc4dc770d5fb",
+      "contentSize": "22447138 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "ChemConc-train.ts",
+      "name": "ChemConc-train.ts",
+      "description": "Train split for the ChemConc task, sktime .ts (X: N x T x D, y: N).",
+      "contentUrl": "https://anonymous.4open.science/r/MUVIS-DIR/data/processed/TennesseeEastmanProcess/train.ts",
+      "encodingFormat": "text/plain",
+      "sha256": "c474bb180fa6b4251722dcf001c63bd212a92a6e8a2ab523505a5870444e32e3",
+      "contentSize": "1108821011 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "ChemConc-test.ts",
+      "name": "ChemConc-test.ts",
+      "description": "Test split for the ChemConc task, sktime .ts (X: N x T x D, y: N).",
+      "contentUrl": "https://anonymous.4open.science/r/MUVIS-DIR/data/processed/TennesseeEastmanProcess/test.ts",
+      "encodingFormat": "text/plain",
+      "sha256": "b07c3ed9b8bee776bae296fce672e1e2105d2b80e391fa7b82aad5f7272a2180",
+      "contentSize": "2169281368 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "TireTemp-train.ts",
+      "name": "TireTemp-train.ts",
+      "description": "Train split for the TireTemp task, sktime .ts (X: N x T x D, y: N).",
+      "contentUrl": "https://anonymous.4open.science/r/MUVIS-DIR/data/processed/VehicleDynamicsDataset/train.ts",
+      "encodingFormat": "text/plain",
+      "sha256": "4aad5dc937c8e9259dfa82bcf34e51fd9296a00d0d10b289320d94e612fbf896",
+      "contentSize": "14123732 B"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "TireTemp-test.ts",
+      "name": "TireTemp-test.ts",
+      "description": "Test split for the TireTemp task, sktime .ts (X: N x T x D, y: N).",
+      "contentUrl": "https://anonymous.4open.science/r/MUVIS-DIR/data/processed/VehicleDynamicsDataset/test.ts",
+      "encodingFormat": "text/plain",
+      "sha256": "9a9a085abc0c6af1dfb267924704c32326a91145bad1959905ea8158e2e8e78b",
+      "contentSize": "2858512 B"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "tasks",
+      "name": "tasks",
+      "description": "Catalog of the nine MUVIS-DIR regression tasks derived from six published source datasets. Each row documents provenance (source + persistent identifier), the input tensor shape (D features x T steps), the regression target and its unit, the test-set size, and the observed target range on the test split.",
+      "key": {
+        "@id": "tasks/task_id"
+      },
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "tasks/task_id",
+          "name": "task_id",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "tasks/source_dataset",
+          "name": "source_dataset",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "tasks/source_doi",
+          "name": "source_doi",
+          "dataType": "sc:URL"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "tasks/source_license",
+          "name": "source_license",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "tasks/source_license_url",
+          "name": "source_license_url",
+          "dataType": "sc:URL"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "tasks/domain",
+          "name": "domain",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "tasks/target",
+          "name": "target",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "tasks/target_unit",
+          "name": "target_unit",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "tasks/n_features_D",
+          "name": "n_features_D",
+          "dataType": "sc:Integer"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "tasks/n_steps_T",
+          "name": "n_steps_T",
+          "dataType": "sc:Integer"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "tasks/n_test",
+          "name": "n_test",
+          "dataType": "sc:Integer"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "tasks/target_min",
+          "name": "target_min",
+          "dataType": "sc:Float"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "tasks/target_max",
+          "name": "target_max",
+          "dataType": "sc:Float"
+        }
+      ],
+      "data": [
+        {
+          "tasks/task_id": "PM10",
+          "tasks/source_dataset": "Beijing Multi-Site Air Quality",
+          "tasks/source_doi": "https://zenodo.org/records/3902667",
+          "tasks/source_license": "CC-BY-4.0",
+          "tasks/source_license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "tasks/domain": "Environmental",
+          "tasks/target": "PM10 concentration",
+          "tasks/target_unit": "ug/m3",
+          "tasks/n_features_D": 9,
+          "tasks/n_steps_T": 24,
+          "tasks/n_test": 5048,
+          "tasks/target_min": 15.0,
+          "tasks/target_max": 995.0
+        },
+        {
+          "tasks/task_id": "PM2.5",
+          "tasks/source_dataset": "Beijing Multi-Site Air Quality",
+          "tasks/source_doi": "https://zenodo.org/records/3902671",
+          "tasks/source_license": "CC-BY-4.0",
+          "tasks/source_license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "tasks/domain": "Environmental",
+          "tasks/target": "PM2.5 concentration",
+          "tasks/target_unit": "ug/m3",
+          "tasks/n_features_D": 9,
+          "tasks/n_steps_T": 24,
+          "tasks/n_test": 5048,
+          "tasks/target_min": 3.0,
+          "tasks/target_max": 999.0
+        },
+        {
+          "tasks/task_id": "HeartRate",
+          "tasks/source_dataset": "PPG-DaLiA",
+          "tasks/source_doi": "https://archive.ics.uci.edu/dataset/495/ppg+dalia",
+          "tasks/source_license": "CC-BY-4.0",
+          "tasks/source_license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "tasks/domain": "Health",
+          "tasks/target": "Heart rate",
+          "tasks/target_unit": "BPM",
+          "tasks/n_features_D": 6,
+          "tasks/n_steps_T": 512,
+          "tasks/n_test": 12940,
+          "tasks/target_min": 41.85,
+          "tasks/target_max": 185.0
+        },
+        {
+          "tasks/task_id": "BatterySoC",
+          "tasks/source_dataset": "Panasonic 18650PF",
+          "tasks/source_doi": "https://data.mendeley.com/datasets/xf68bwh54v/1",
+          "tasks/source_license": "BSD-3-Clause",
+          "tasks/source_license_url": "https://opensource.org/license/bsd-3-clause",
+          "tasks/domain": "Energy",
+          "tasks/target": "State of charge",
+          "tasks/target_unit": "fraction",
+          "tasks/n_features_D": 7,
+          "tasks/n_steps_T": 120,
+          "tasks/n_test": 158126,
+          "tasks/target_min": 0.0691,
+          "tasks/target_max": 1.0
+        },
+        {
+          "tasks/task_id": "Monterey",
+          "tasks/source_dataset": "REVS (2013 Monterey Motorsports Reunion)",
+          "tasks/source_doi": "https://purl.stanford.edu/tt103jr6546",
+          "tasks/source_license": "ODC-By-1.0",
+          "tasks/source_license_url": "https://opendatacommons.org/licenses/by/1-0/",
+          "tasks/domain": "Automotive",
+          "tasks/target": "Lateral velocity v_y",
+          "tasks/target_unit": "m/s",
+          "tasks/n_features_D": 12,
+          "tasks/n_steps_T": 20,
+          "tasks/n_test": 21357,
+          "tasks/target_min": -3.41,
+          "tasks/target_max": 4.29
+        },
+        {
+          "tasks/task_id": "Targa13",
+          "tasks/source_dataset": "REVS (2013 Targa Sixty Six)",
+          "tasks/source_doi": "https://purl.stanford.edu/yf219gg2055",
+          "tasks/source_license": "ODC-By-1.0",
+          "tasks/source_license_url": "https://opendatacommons.org/licenses/by/1-0/",
+          "tasks/domain": "Automotive",
+          "tasks/target": "Lateral velocity v_y",
+          "tasks/target_unit": "m/s",
+          "tasks/n_features_D": 12,
+          "tasks/n_steps_T": 20,
+          "tasks/n_test": 11109,
+          "tasks/target_min": -1.48,
+          "tasks/target_max": 2.11
+        },
+        {
+          "tasks/task_id": "Targa14",
+          "tasks/source_dataset": "REVS (2014 Targa Sixty Six)",
+          "tasks/source_doi": "https://purl.stanford.edu/hd122pw0365",
+          "tasks/source_license": "ODC-By-1.0",
+          "tasks/source_license_url": "https://opendatacommons.org/licenses/by/1-0/",
+          "tasks/domain": "Automotive",
+          "tasks/target": "Lateral velocity v_y",
+          "tasks/target_unit": "m/s",
+          "tasks/n_features_D": 12,
+          "tasks/n_steps_T": 20,
+          "tasks/n_test": 9036,
+          "tasks/target_min": -1.29,
+          "tasks/target_max": 1.12
+        },
+        {
+          "tasks/task_id": "ChemConc",
+          "tasks/source_dataset": "Tennessee Eastman Process",
+          "tasks/source_doi": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6C3JR1",
+          "tasks/source_license": "CC0-1.0",
+          "tasks/source_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "tasks/domain": "Industrial",
+          "tasks/target": "Chemical concentration",
+          "tasks/target_unit": "a.u.",
+          "tasks/n_features_D": 33,
+          "tasks/n_steps_T": 20,
+          "tasks/n_test": 470500,
+          "tasks/target_min": 4.555,
+          "tasks/target_max": 5.126
+        },
+        {
+          "tasks/task_id": "TireTemp",
+          "tasks/source_dataset": "Vehicle Dynamics Dataset",
+          "tasks/source_doi": "https://exhibits.stanford.edu/data/catalog/hh613qz0317",
+          "tasks/source_license": "CC-BY-SA-4.0",
+          "tasks/source_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "tasks/domain": "Automotive",
+          "tasks/target": "Tire temperature",
+          "tasks/target_unit": "deg C",
+          "tasks/n_features_D": 11,
+          "tasks/n_steps_T": 50,
+          "tasks/n_test": 280,
+          "tasks/target_min": 50.34,
+          "tasks/target_max": 86.26
+        }
+      ]
+    }
+  ]
+}
